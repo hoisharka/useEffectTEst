@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 
-const UseEffectTest01 = () => {
+const UseEffectTest02 = () => {
   const [key, setKey] = useState('init')
   const keyRef = useRef(key)
 
@@ -32,4 +32,4 @@ const UseEffectTest01 = () => {
   )
 }
 
-export default UseEffectTest01
+export default UseEffectTest02
