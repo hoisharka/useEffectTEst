@@ -12,13 +12,6 @@ const UseEffectTest01 = () => {
   }
 
   useEffect(() => {
-    window.addEventListener('keyup', handleKeyup)
-    return () => {
-      window.removeEventListener('keyup', handleKeyup)
-    }
-  }, [])
-
-  useEffect(() => {
     console.log('set event')
     window.addEventListener('keyup', handleKeyup)
     window.addEventListener('mouseup', handelMouseUp)
