@@ -1,0 +1,16 @@
+#+TITLE: 01. window.addEventListener 의 이벤트 핸들러에선 state 갱신이 안됨
+#+KEYWORDS: react, useEffect, window.addEventListener
+#+DESCRIPTION: 01. window.addEventListener 의 이벤트 핸들러에선 state 갱신이 안됨
+
+* 01. window.addEventListener 의 이벤트 핸들러에선 state 갱신이 안됨
+
+** 케이스 설명
+- key state의 초기값은 'init' 입니다.
+- useEffect에서 window.addEventListener로 keyup과 mouseup 이벤트를 등록했습니다.
+- keyup 핸들러로 인해 키보드를 눌렀다 떼면, setKey로 key state 갱신됩니다.
+- mouseup 핸들러로 인해 마우스오른쪽 버튼을 눌렀다 떼면, key state 를 콘솔 로그로 찍습니다.
+
+** 이슈 재현
+- 페이지 진입, 'mouseup' 이벤트 발생 > 콘솔로 key state 값 'init'으로 찍힘.
+- 화살표 위 키 누름 > key state는 'ArrowUp'으로 변경됨.
+- 다시 'mouseup' 이벤트 발생 > 콘솔로 key state 값이 ~'ArrowUp'이 아닌 'init'으로 찍힘~.
