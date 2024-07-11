@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 
-const UseEffectTest04 = () => {
+const UseEffectRenderTest01 = () => {
+  console.log('[ UseEffectRenderTest01 ]')
   const [key, setKey] = useState('init')
   const handleMouseUpRef = useRef<() => void>(() => {})
 
@@ -22,21 +23,21 @@ const UseEffectTest04 = () => {
   }, [])
 
   useEffect(() => {
-    console.log('set mouseup event')
-    const handleMouseUp = () => handleMouseUpRef.current()
-    window.addEventListener('mouseup', handleMouseUp)
-    return () => {
-      console.log('unset mouseup event')
-      window.removeEventListener('mouseup', handleMouseUp)
-    }
-  }, [])
+    console.log('[ useEffect ] 의존성 key', key)
+  }, [key])
+
+  useEffect(() => {
+    console.log(`[ useEffect ] 의존성 key + setKey('init')`, key)
+    setKey('init')
+  }, [key])
 
   return (
     <div>
-      <h1>04. 핸들러를 ref로 관리</h1>
+      <h1>01. useEffect와 랜더링의 관계</h1>
       <h2>{key}</h2>
+      <p>useEffect로 인해 랜더링이 다시 발생하는 경우는 useEffect안에서 state값을 바꿀 때이다.</p>
     </div>
   )
 }
 
-export default UseEffectTest04
+export default UseEffectRenderTest01

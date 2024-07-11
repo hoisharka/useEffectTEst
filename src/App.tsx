@@ -5,6 +5,7 @@ import UseEffectWindowEventTest01 from './components/windowEvent/UseEffectWindow
 import UseEffectWindowEventTest02 from './components/windowEvent/UseEffectWindowEventTest02.tsx'
 import UseEffectWindowEventTest03 from './components/windowEvent/UseEffectWindowEventTest03.tsx'
 import UseEffectWindowEventTest04 from './components/windowEvent/UseEffectWindowEventTest04.tsx'
+import UseEffectRenderTest01 from './components/render/UseEffectRenderTest01.tsx'
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       <Route path="/window-event-test02" element={<UseEffectWindowEventTest02 />} />
       <Route path="/window-event-test03" element={<UseEffectWindowEventTest03 />} />
       <Route path="/window-event-test04" element={<UseEffectWindowEventTest04 />} />
-      <Route path="/render-test01" element={<UseEffectWindowEventTest04 />} />
+      <Route path="/render-test01" element={<UseEffectRenderTest01 />} />
     </Routes>
   )
 }
