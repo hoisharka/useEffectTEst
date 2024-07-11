@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-const UseEffectTest03 = () => {
+const UseEffectWindowEventTest03 = () => {
   const [key, setKey] = useState('init')
 
   const handleMouseUp = () => {
@@ -46,4 +46,4 @@ const UseEffectTest03 = () => {
   )
 }
 
-export default UseEffectTest03
+export default UseEffectWindowEventTest03
