@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 const UseEffectTest03 = () => {
   const [key, setKey] = useState('init')
 
-  const handelMouseUp = () => {
+  const handleMouseUp = () => {
     console.log(`[ handleMouseUp ] key: ${key}`)
   }
   const handleKeyup = (e) => {
@@ -22,12 +22,12 @@ const UseEffectTest03 = () => {
 
   useEffect(() => {
     console.log('set mouseup event')
-    window.addEventListener('mouseup', handelMouseUp)
+    window.addEventListener('mouseup', handleMouseUp)
     return () => {
       console.log('unset mouseup event')
-      window.removeEventListener('mouseup', handelMouseUp)
+      window.removeEventListener('mouseup', handleMouseUp)
     }
-  }, [handelMouseUp])
+  }, [handleMouseUp])
 
   return (
     <div>
@@ -39,7 +39,7 @@ const UseEffectTest03 = () => {
         <br />
         갱신된 handleMouseUp은 mouseup 리스너를 등록한 useEffect를 다시 돌린다.
         <br />
-        그래서 갱신된 key state가 적용된 handelMouseUp가 다시 등록되고 mouseup 하면 갱신된 key
+        그래서 갱신된 key state가 적용된 handleMouseUp가 다시 등록되고 mouseup 하면 갱신된 key
         state가 콘솔로 찍힌다.
       </p>
     </div>

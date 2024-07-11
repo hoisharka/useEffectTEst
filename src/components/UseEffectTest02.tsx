@@ -4,7 +4,7 @@ const UseEffectTest02 = () => {
   const [key, setKey] = useState('init')
   const keyRef = useRef(key)
 
-  const handelMouseUp = () => {
+  const handleMouseUp = () => {
     console.log(`[ handleMouseUp ] key: ${key}, keyRef.current:; ${keyRef.current}`)
   }
   const handleKeyup = (e) => {
@@ -16,10 +16,10 @@ const UseEffectTest02 = () => {
   useEffect(() => {
     console.log('set event')
     window.addEventListener('keyup', handleKeyup)
-    window.addEventListener('mouseup', handelMouseUp)
+    window.addEventListener('mouseup', handleMouseUp)
     return () => {
       console.log('unset event')
-      window.removeEventListener('mouseup', handelMouseUp)
+      window.removeEventListener('mouseup', handleMouseUp)
       window.removeEventListener('keyup', handleKeyup)
     }
   }, [])

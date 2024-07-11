@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 const UseEffectTest01 = () => {
   const [key, setKey] = useState('init')
 
-  const handelMouseUp = () => {
+  const handleMouseUp = () => {
     console.log('[ handleMouseUp ] key', key)
   }
   const handleKeyup = (e) => {
@@ -14,10 +14,10 @@ const UseEffectTest01 = () => {
   useEffect(() => {
     console.log('set event')
     window.addEventListener('keyup', handleKeyup)
-    window.addEventListener('mouseup', handelMouseUp)
+    window.addEventListener('mouseup', handleMouseUp)
     return () => {
       console.log('unset event')
-      window.removeEventListener('mouseup', handelMouseUp)
+      window.removeEventListener('mouseup', handleMouseUp)
       window.removeEventListener('keyup', handleKeyup)
     }
   }, [])
