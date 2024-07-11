@@ -33,6 +33,15 @@ const UseEffectTest01 = () => {
     <div>
       <h1>03. useEffect 의존성으로 솔루션 모색</h1>
       <h2>{key}</h2>
+
+      <p>
+        keyup 할 때마다 key state는 변경되고 리랜더 되며 handleMouseUp도 갱신된다.
+        <br />
+        갱신된 handleMouseUp은 mouseup 리스너를 등록한 useEffect를 다시 돌린다.
+        <br />
+        그래서 갱신된 key state가 적용된 handelMouseUp가 다시 등록되고 mouseup 하면 갱신된 key
+        state가 콘솔로 찍힌다.
+      </p>
     </div>
   )
 }
