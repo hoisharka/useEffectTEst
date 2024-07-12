@@ -24,7 +24,7 @@ const UseEffectWindowEventTest01 = () => {
 
   return (
     <div>
-      <h1>01. window.addEventListener 의 이벤트 핸들러에선 state 갱신이 안됨</h1>
+      <h1>01. useEffect와 window.addEventListener 사용시 문제점</h1>
       <h2>{key}</h2>
     </div>
   )

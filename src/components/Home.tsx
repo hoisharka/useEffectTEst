@@ -9,7 +9,7 @@ const Home = () => {
         <ul>
           <li>
             <a href={`/window-event-test01`}>
-              01. window.addEventListener 의 이벤트 핸들러에선 state 갱신이 안됨
+              01. useEffect와 window.addEventListener 사용시 문제점
             </a>
           </li>
           <li>
